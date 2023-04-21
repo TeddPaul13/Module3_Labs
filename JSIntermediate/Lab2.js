@@ -271,31 +271,49 @@ phoneBookABC.set('Caroline', '0455221182')
 // a) Create a new phoneBookDEF Map to store names beginning with D, E or F
 
 const phoneBookDEF = new Map()
-phoneBookDEF.set('Danny', '0473456433')
-phoneBookDEF.set('Elly', '0473006433')
+phoneBookDEF.set('Danny', '0473456433'),
+phoneBookDEF.set('Elly', '0473006433'),
 phoneBookDEF.set('Fally', '0473422233')
 
-console.log(phoneBookDEF)
-// b) Initialise the contents of phoneBookDEF by passing in an array of keys/values
-const mapContents = [...phoneBookDEF]
 
+//console.log(phoneBookDEF)
+// b) Initialise the contents of phoneBookDEF by passing in an array of keys/values
+const phoneBookDEFArray = new Map([['Danny', '0473456433'],
+['Elly', '0473006433'],
+['Fally', '0473422233']])
 
 
 
 // c) Update the phone number for Caroline
-
-
-
+phoneBookABC.set('Caroline', '0423999888')
 
 
 // d) Write a function printPhoneBook(contacts) that prints the names and phone
 // numbers in the given Map
 
-
+function printPhoneBook(contacts){
+    contacts.forEach((value, key) =>{
+        console.log(key + ':' + value)
+    })
+}
+printPhoneBook(phoneBookABC)
 
 // e) Combine the contents of the two individual Maps into a single phoneBook Map
-
+const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
 
 
 
 // f) Print out the full list of names in the combined phone book
+console.log(phoneBook)
+
+function foo() {
+    console.log('First');
+    }
+    
+    function bar() {
+    console.log('Second');
+    setTimeout(foo, 0);
+    }
+    
+    bar();
+    console.log('Third');
