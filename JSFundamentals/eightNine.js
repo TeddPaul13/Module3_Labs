@@ -66,10 +66,10 @@ let cat1 = { name: 'Fluffy', breed: 'Siberian' };
 //e) Change the way the moreSports and cat2 variables are created to ensure the
 //originals remain independent
 
-          let moreSports = []
-          moreSports.push('Rugby', 'Tennis')
+        //   let moreSports = []
+        //   moreSports.push('Rugby', 'Tennis')
 
-          cat2 = {}
-          cat2.name = 'Cheeky'
+        //   cat2 = {}
+        //   cat2.name = 'Cheeky'
 
 //***************************************************************** */

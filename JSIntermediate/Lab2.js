@@ -304,7 +304,7 @@ const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
 
 
 // f) Print out the full list of names in the combined phone book
-//console.log(phoneBook)
+console.log(phoneBook)
 
 // Given the below salaries object, perform the following tasks.
 let salaries = {
@@ -358,3 +358,5 @@ console.log(mydays)
 
 //d) Write a function daysInBetween(date1, date2) which calculates and returns the amount
 //of days in between the two given dates.
+
+ 
