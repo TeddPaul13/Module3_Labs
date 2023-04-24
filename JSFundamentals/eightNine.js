@@ -11,6 +11,13 @@ const sydney = {
   timezone: 'Australia/Sydney'
   }
 
+  const printObject = (obj) => {
+    for (const property in obj){
+      console.log(`${property}: ${obj[property]}`)
+  
+    }
+  }
+
 //b) Create a new object for a different city with different properties and call your function
 //again with the new object.
 
@@ -22,12 +29,7 @@ const melbourne = {
   timezone: 'Australia/Melbourne'
   }
 
-const printObject = (obj) => {
-  for (const property in obj){
-    console.log(`${property}: ${obj[property]}`)
 
-  }
-}
 printObject(sydney)
 printObject(melbourne)
 
@@ -60,16 +62,16 @@ let cat1 = { name: 'Fluffy', breed: 'Siberian' };
 
 //d) Print the original teamSports, dog1 and cat1 variables to the console. Have they
 //changed? Why?
-          console.log(teamSports)
-          console.log(dog1)
-          console.log(cat1)
+          console.log(teamSports) // changed because more elements were pushed to the array
+          console.log(dog1) // the name was reassigned a new value
+          console.log(cat1) // the name was reassigned a new value
 //e) Change the way the moreSports and cat2 variables are created to ensure the
 //originals remain independent
 
-        //   let moreSports = []
-        //   moreSports.push('Rugby', 'Tennis')
+          // let moreSports = []
+          // moreSports.push('Rugby', 'Tennis')
 
-        //   cat2 = {}
-        //   cat2.name = 'Cheeky'
+          // cat2 = {}
+          // cat2.name = 'Cheeky'
 
 //***************************************************************** */

@@ -23,7 +23,7 @@ const ucFirstLetter = (thestring) => {
     
 
 };
-//console.log(ucFirstLetter("this is javascript"))
+console.log(ucFirstLetter("this is javascript"))
 
 /////***************************************************************************************************** */
 

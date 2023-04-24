@@ -1,8 +1,7 @@
-//2.
-//Create a function truncate(str, max) that truncates a given string of text if its total
-//length is greater than the max length. It should return either the truncated text, with an
-//ellipsis (…) added to the end if it was too long, or the original text otherwise.
-//
+/**2. Create a function truncate(str, max) that truncates a given string of text if its total
+length is greater than the max length. It should return either the truncated text, with an
+ellipsis (…) added to the end if it was too long, or the original text otherwise.
+ */
 
 function truncate(str, max){
     if (str.length > max){

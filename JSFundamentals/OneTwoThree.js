@@ -17,7 +17,9 @@
 // undefined === null = false
 // " \t \n" - 2 = -2
 
-// // 2.
+// // 2. . Which of the below are not giving the right answer? Why are they not correct? How can we
+//fix them?
+
 // let three = 3
 // let four = 4
 // let thirty = 30
@@ -33,13 +35,14 @@
 // Implicit conversion is done when you perform arithmetic opreation on the variables.
 
 
-  // //3 . 
-  // if (0) console.log('#1 zero is true')  // Will log because 0 is a truthy value
+  // 3. Which of the following console.log messages will print? Why?
+
+   if (0) console.log('#1 zero is true')  // Will log because 0 is a truthy value
   // // First on did not log --- 0 must be a falsy value
-  // if ("0") console.log('#2 zero is true') // Will log because "0" is a truthy value
-  // if (null) console.log('null is true') // Will log because null is a falsy value
-  // if (-1) console.log('negative is true') //Will log because -1 is a truthy value
-  // if (1) console.log('positive is true') //Will log because 1 is a truthy value
+  if ("0") console.log('#2 zero is true') // Will log because "0" is a truthy value
+  if (null) console.log('null is true') // Will log because null is a falsy value
+  if (-1) console.log('negative is true') //Will log because -1 is a truthy value
+  if (1) console.log('positive is true') //Will log because 1 is a truthy value
     
 
 
