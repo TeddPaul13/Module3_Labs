@@ -59,6 +59,7 @@ const inigo = {
   let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `;
   console.log(greeting + this.getCatchPhrase(person));
   },
+  //Arrow function and conditional operator.
   getCatchPhrase: (person) =>  (person.numFingers == 6) ? 'You have Fancy Fingers' : 'Nice to meet you.'
     // if (person.numFingers == 6){
     //   return 'You have Fancy Fingers'

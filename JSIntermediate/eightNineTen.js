@@ -92,7 +92,7 @@ const months = today.getMonth() - dob.getMonth();
 
 let mydays = today.getDate() - dob.getDate();
 
-console.log(mydays)
+console.log(mydays) 
 
 //d) Write a function daysInBetween(date1, date2) which calculates and returns the amount
 //of days in between the two given dates.

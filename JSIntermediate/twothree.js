@@ -27,7 +27,7 @@ let animals = ['Tiger', 'Giraffe']
 // a) Add 2 new values to the end
 
 animals.push('Monkey', 'Lion')
-console.log(animals)
+//console.log(animals)
 
 //b) Add 2 new values to the beginning
 
@@ -47,7 +47,7 @@ const sortedAnimals = animals.sort((a,b) => a-b);
      animals[midIndex] = newAnimal;
 
  }
- replaceMiddleAnimal('fox')
+ //replaceMiddleAnimal('fox')
  
 
 // e) Write a function findMatchingAnimals(beginsWith) that returns a new array
@@ -55,7 +55,13 @@ const sortedAnimals = animals.sort((a,b) => a-b);
 //regardless of upper/lower case.
 
 function findMatchingAnimals(beginsWith){
+    for (let i=0; i<animals.length; i++){
+        beginsWith = animals[i].charAt(0)
+        return animals
+    }
+
+    
 
 }
-
+console.log(findMatchingAnimals('M'))
 //************************************************************************** */
