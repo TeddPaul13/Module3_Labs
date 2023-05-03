@@ -54,14 +54,10 @@ const sortedAnimals = animals.sort((a,b) => a-b);
 //containing all the animals that begin with the beginsWith string. Try to make it work
 //regardless of upper/lower case.
 
-function findMatchingAnimals(beginsWith){
-    for (let i=0; i<animals.length; i++){
-        beginsWith = animals[i].charAt(0)
-        return animals
-    }
+function findMatchingAnimals(beginsWith) { 
+    return animals.filter(animal => animal.toLowerCase().startsWith(beginsWith.toLowerCase())) 
+} 
+console.log(findMatchingAnimals("c"))
 
-    
-
-}
-console.log(findMatchingAnimals('M'))
 //************************************************************************** */
+

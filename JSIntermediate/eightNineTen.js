@@ -42,7 +42,7 @@ const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
 
 
 // f) Print out the full list of names in the combined phone book
-console.log(phoneBook)
+//console.log(phoneBook)
 
 // Given the below salaries object, perform the following tasks.
 let salaries = {
@@ -74,27 +74,38 @@ function topEarner(object){
 
 //10.The following code uses the Date object to print the current time and the number of hours
 //that have passed today so far. Extend the code to do the following:
-const today = new Date();
-console.log('Current time is ' + today.toLocaleTimeString())
-//console.log(today.getHours() + ' hours have passed so far today')
+ const today = new Date();
+// console.log('Current time is ' + today.toLocaleTimeString())
+// console.log(today.getHours() + ' hours have passed so far today')
 //a) Print the total number of minutes that have passed so far today
-//console.log(today.getHours()*60 + today.getMinutes() + ' minutes have passed so far today')
+console.log(today.getHours()*60 + today.getMinutes() + ' minutes have passed so far today')
 
 //b) Print the total number of seconds that have passed so far today
-//console.log(today.getHours()*360 + today.getMinutes()*60 + today.getSeconds() + ' seconds have passed so far today')
+console.log(today.getHours()*360 + today.getMinutes()*60 + today.getSeconds() + ' seconds have passed so far today')
 
 //c) Calculate and print your age as: 'I am x years, y months and z days old'
-const dob = new Date(1992,5,22, 8, 0, 0)
+const dob = new Date(1992,6,22, 8, 0, 0)
 
-const yearsOfBirth = today.getFullYear() - dob.getFullYear();
+let yearsOfBirth = today.getFullYear() - dob.getFullYear();
 
-const months = today.getMonth() - dob.getMonth();
 
-let mydays = today.getDate() - dob.getDate();
+let months = today.getMonth() - dob.getMonth();
 
-console.log(mydays) 
+let mydays = Math.abs(today.getDate() - dob.getDate());
+
+if (months<0 || (months ===0 && today.getDate()<dob.getDate())){
+    yearsOfBirth--;
+    months = 11-dob.getMonth()+1+today.getMonth();
+}
+console.log(`I am ${yearsOfBirth} years, ${months} months and ${mydays} days old`)
 
 //d) Write a function daysInBetween(date1, date2) which calculates and returns the amount
 //of days in between the two given dates.
 
- 
+ function daysInBetween(date1,date2){
+    daysApartInMs = Math.abs(date2 - date1);
+    AmountOfDays = daysApartInMs / 86400000; // 86400000 is milliseconds in a day
+
+    return AmountOfDays;
+ }
+ console.log(daysInBetween(new Date(2022, 4, 4), new Date(2023, 4, 4)))
