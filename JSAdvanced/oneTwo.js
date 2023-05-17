@@ -2,12 +2,12 @@
 increments a counter.*/
 
 function makeCounter() {
-let currentCount = 0;
-return function() {
-currentCount++;
-console.log(currentCount)
-return currentCount;
-};
+  let currentCount = 0;
+  return function () {
+    currentCount++;
+    console.log(currentCount);
+    return currentCount;
+  };
 }
 //let counter1 = makeCounter();
 //counter1(); // 1
@@ -15,7 +15,7 @@ return currentCount;
 /**a) Create a second counter counter2 using the makeCounter function and test to see if
 it remains independent to counter1*/
 let counter2 = makeCounter();
-
+counter2();
 /**b) Modify makeCounter so that it takes an argument startFrom specifying where the
 counter starts from (instead of always starting from 0)*/
 function makeCounter(startFrom) {
@@ -39,22 +39,41 @@ function makeCounter(startFrom = 0, incrementBy = 1) {
     return currentCount;
   };
 }
-   // let counter1 = makeCounter(9, 2);
-    //counter1();
-    //counter1();
+// let counter1 = makeCounter(9, 2);
+//counter1();
+//counter1();
+
+/**------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 /**2. The following delayMsg function is intended to be used to delay printing a message until
 some time has passed */
-function delayMsg(msg)
+//function delayMsg(msg)
 {
-console.log(`This message will be printed after a delay: ${msg}`)
+  //console.log(`This message will be printed after a delay: ${msg}`)
 }
-setTimeout(delayMsg, 100, '#1: Delayed by 100ms');
-setTimeout(delayMsg, 20, '#2: Delayed by 20ms');
-setTimeout(delayMsg, 0, '#3: Delayed by 0ms')
-delayMsg('#4: Not Delayed at all')
+// setTimeout(delayMsg, 100, '#1: Delayed by 100ms');
+// setTimeout(delayMsg, 20, '#2: Delayed by 20ms');
+// setTimeout(delayMsg, 0, '#3: Delayed by 0ms')
+// delayMsg('#4: Not Delayed at all')
 
 //a) What order will the four tests below print in? Why?
+
+/**It will print 4 3 2 1 because that is the order of the delay put by by the setTimeout... Lesser the setTimeout the faster it prints */
+
 //b) Rewrite delayMsg as an arrow function
+const delayMsg = (msg) => {
+  console.log(`This message will be printed after a delay: ${msg}`);
+};
+
+setTimeout(delayMsg, 100, "#1: Delayed by 100ms");
+setTimeout(delayMsg, 20, "#2: Delayed by 20ms");
+setTimeout(delayMsg, 0, "#3: Delayed by 0ms");
+delayMsg("#4: Not Delayed at all");
+
 //c) Add a fifth test which uses a large delay time (greater than 10 seconds)
+
+setTimeout(delayMsg, 15000, "#5: Delayed by 15s");
+
 //d) Use clearTimeout to prevent the fifth test from printing at all.
+const clearFifthTest = setTimeout(delayMsg, 15000, "#5: Delayed by 15s");
+clearTimeout(clearFifthTest); //Syntax looks okay but clearTimeout not working as expected, can't figure out.

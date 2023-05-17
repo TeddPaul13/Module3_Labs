@@ -1,0 +1,16 @@
+{
+  "name": "jsadvanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ten.js",
+  "type":"module",
+  "scripts": {
+    "start": "ten.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}

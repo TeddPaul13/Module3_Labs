@@ -24,10 +24,17 @@ car = {...car, year:2023}
 // b)? Why?
 
 /** New values because the year is changed before the setTimeout is executed */
+
 // d) Use bind to fix the description method so that it can be called from within
 // setTimeout without a wrapper function
 
 let desiredCar = car.description.bind(car);
-setTimeout(desiredCar, 200)
+setTimeout(desiredCar, 2000)
 // e) Change another property of the car by creating a clone and overriding it, and test that
 // setTimeout still uses the bound value from d)
+
+car = {...car, make:'Maserati'}
+let cloneCar= car.description.bind(car)
+setTimeout(cloneCar, 2000)
+
+/**DONE */
