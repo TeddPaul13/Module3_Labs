@@ -6,9 +6,10 @@
 const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
 const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
 // compare the index of all items with the first item, if indexes of a similar item in the array don't match, filter.
-const unique = duplicatesArray => duplicatesArray.filter((item, index) => duplicatesArray.indexOf(item) !== index);
+const unique = duplicatesArray => duplicatesArray.filter((item, index) => duplicatesArray.indexOf(item) == index);
 
-//console.log(unique(testScores))
+console.log(unique(colours))
+console.log(unique(testScores))
 //function unique(duplicatesArray){
    // duplicatesArray.filter((item, index) => duplicatesArray.indexOf(item) !== index)
     
